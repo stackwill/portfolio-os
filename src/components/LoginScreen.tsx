@@ -11,7 +11,19 @@ export const LoginScreen: React.FC = () => {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     if (username === 'guest' && password === '') {
-      login();
+      // Request fullscreen mode
+      const element = document.documentElement;
+      if (element.requestFullscreen) {
+        element.requestFullscreen().then(() => {
+          login();
+        }).catch((err) => {
+          console.warn('Could not enter fullscreen mode:', err);
+          login(); // Login anyway if fullscreen fails
+        });
+      } else {
+        // Fallback for browsers that don't support requestFullscreen
+        login();
+      }
     } else {
       setError('Invalid credentials. Try username: guest (no password)');
       setTimeout(() => setError(''), 3000);
