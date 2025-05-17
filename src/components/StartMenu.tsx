@@ -35,7 +35,7 @@ export const StartMenu: React.FC = () => {
             style={{
               padding: '8px 12px',
               background: 'linear-gradient(to right, #000080, #1084d0)',
-              color: '#fff',
+              color: '#000',
               fontWeight: 'bold',
               fontSize: '14px'
             }}
@@ -49,8 +49,7 @@ export const StartMenu: React.FC = () => {
                 key={program.id}
                 whileHover={{ 
                   backgroundColor: '#000080', 
-                  color: '#fff',
-                  '& img': { filter: 'brightness(2)' }
+                  color: '#fff'
                 }}
                 style={{
                   padding: '8px',
@@ -82,8 +81,7 @@ export const StartMenu: React.FC = () => {
             <motion.div
               whileHover={{ 
                 backgroundColor: '#000080', 
-                color: '#fff',
-                '& img': { filter: 'brightness(2)' }
+                color: '#fff'
               }}
               style={{
                 padding: '8px',

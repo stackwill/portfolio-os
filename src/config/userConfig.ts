@@ -59,15 +59,13 @@ const userConfig: UserConfig = {
   personal: {
     name: "William Hanlon",
     role: "Young Developer",
-    location: "Ely",
+    location: "United Kingdom",
     avatar: "/assets/images/profile.jpg",
     bio: "Started with minecraft command blocks, evolved into whatever this is."
   },
   social: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://twitter.com/yourhandle",
-    email: "your.email@example.com"
+    github: "https://github.com/stackwill",
+    email: "williamjhanlon@icloud.com"
   },
   experience: [
     {
@@ -84,25 +82,33 @@ const userConfig: UserConfig = {
     }
   ],
   skills: [
-    { name: "React", level: 90, category: "Frontend", icon: "⚛️" },
-    { name: "TypeScript", level: 85, category: "Frontend", icon: "📘" },
-    { name: "Node.js", level: 85, category: "Backend", icon: "🟢" },
-    { name: "Python", level: 90, category: "Backend", icon: "🐍" },
-    { name: "PostgreSQL", level: 80, category: "Backend", icon: "🐘" },
-    { name: "Docker", level: 80, category: "DevOps", icon: "🐳" },
-    { name: "AWS", level: 75, category: "DevOps", icon: "☁️" },
-    { name: "Git", level: 90, category: "Tools", icon: "📚" }
+    { name: "TypeScript", level: 30, category: "Frontend", icon: "📘" },
+    { name: "Node.js", level: 60, category: "Backend", icon: "🟢" },
+    { name: "Python", level: 75, category: "Backend", icon: "🐍" },
+    { name: "Docker", level: 50, category: "DevOps", icon: "🐳" },
+    { name: "Git", level: 90, category: "Tools", icon: "📚" },
+    { name: "Go", level: 75, category: "Backend", icon: "☁️" }
   ],
   projects: [
     {
       title: "PortfolioOS",
-      description: "A Windows-style portfolio website built with React and TypeScript. Features window management, custom programs, and retro UI.",
+      description: "A Windows-style portfolio website built with React and TypeScript. Features window management, custom programs, and retro UI. (What you are viewing lol)",
       technologies: ["React", "TypeScript", "Zustand", "Framer Motion"],
       image: "/assets/images/projects/portfolio-os.png",
       link: "#",
       github: "https://github.com/yourusername/portfolio-os",
       year: "2024",
       category: "Web Development"
+    },
+    {
+      title: "Pow",
+      description: "A simple nano-like text editor with syntax highlighting and theming",
+      technologies: ["Go"],
+      image: "/assets/images/projects/portfolio-os.png",
+      link: "#",
+      github: "https://github.com/stackwill/pow",
+      year: "2025",
+      category: "Programs"
     }
     // Add more projects here
   ],
