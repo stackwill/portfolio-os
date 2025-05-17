@@ -38,7 +38,7 @@ export const AboutMe: React.FC = () => {
           borderRadius: '4px'
         }}>
           <h3 style={{ color: '#000', marginBottom: '12px', borderBottom: '1px solid #000080', paddingBottom: '4px' }}>
-            Quick Facts
+            Hi 👋, I'm Will
           </h3>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             <li style={{ marginBottom: '12px', display: 'flex', alignItems: 'center', color: '#000' }}>
@@ -56,10 +56,54 @@ export const AboutMe: React.FC = () => {
           </ul>
         </div>
 
+        {/* GitHub Button */}
+        <motion.div
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.97 }}
+          style={{ 
+            marginBottom: '24px',
+            display: 'flex',
+            justifyContent: 'center'
+          }}
+        >
+          <a
+            href="https://github.com/stackwill"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ 
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '12px',
+              background: 'linear-gradient(135deg, #2b3137 0%, #000000 100%)',
+              color: 'white',
+              padding: '16px 24px',
+              borderRadius: '8px',
+              textDecoration: 'none',
+              fontWeight: 'bold',
+              fontSize: '18px',
+              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+              width: '80%',
+              transition: 'all 0.3s ease'
+            }}
+          >
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="28" 
+              height="28" 
+              viewBox="0 0 24 24" 
+              fill="white"
+            >
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            Check Out My GitHub
+          </a>
+        </motion.div>
+
         <div style={{ 
           marginBottom: '24px',
           display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
+          gridTemplateColumns: '1fr',
           gap: '20px'
         }}>
           {/* Skills Section */}
@@ -121,56 +165,6 @@ export const AboutMe: React.FC = () => {
               ))}
             </div>
           </div>
-
-          {/* Experience Section */}
-          <div style={{ 
-            background: '#fff',
-            border: '2px solid #dfdfdf',
-            borderRadius: '4px'
-          }}>
-            <h3 style={{ 
-              color: '#000', 
-              padding: '8px 12px',
-              margin: 0,
-              background: '#f0f0f0',
-              borderBottom: '1px solid #dfdfdf',
-              fontSize: '14px',
-              fontWeight: 'bold'
-            }}>
-              Experience
-            </h3>
-            <div style={{ padding: '12px' }}>
-              {userConfig.experience.map((exp, index) => (
-                <div key={index} style={{ 
-                  marginBottom: index === userConfig.experience.length - 1 ? 0 : '16px',
-                  paddingBottom: index === userConfig.experience.length - 1 ? 0 : '16px',
-                  borderBottom: index === userConfig.experience.length - 1 ? 'none' : '1px solid #dfdfdf'
-                }}>
-                  <div style={{ 
-                    fontSize: '13px', 
-                    color: '#000080', 
-                    marginBottom: '4px',
-                    fontWeight: 'bold'
-                  }}>
-                    {exp.role}
-                  </div>
-                  <div style={{ fontSize: '12px', color: '#000', marginBottom: '2px' }}>
-                    {exp.company}
-                  </div>
-                  <div style={{ fontSize: '11px', color: '#666', marginBottom: '6px' }}>
-                    {exp.period}
-                  </div>
-                  <div style={{ 
-                    fontSize: '12px',
-                    color: '#000',
-                    lineHeight: '1.4'
-                  }}>
-                    {exp.description}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
         <div style={{ 
@@ -185,36 +179,6 @@ export const AboutMe: React.FC = () => {
           <p>
             Want to know more? Check out my projects or get in touch through the Contact app!
           </p>
-          <div style={{ marginTop: '12px', display: 'flex', gap: '16px' }}>
-            <a
-              href={userConfig.social.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ 
-                color: '#000080', 
-                textDecoration: 'none',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '4px'
-              }}
-            >
-              <span>🐙</span> GitHub
-            </a>
-            <a
-              href={userConfig.social.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ 
-                color: '#000080', 
-                textDecoration: 'none',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '4px'
-              }}
-            >
-              <span>💼</span> LinkedIn
-            </a>
-          </div>
         </div>
       </motion.div>
     </div>

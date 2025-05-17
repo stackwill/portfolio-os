@@ -16,6 +16,19 @@ const App: React.FC = () => {
       useSystemStore.setState({ systemTime: new Date() });
     }, 1000);
 
+    // Auto-open "About This Site" app after 2 seconds
+    const aboutThisSiteApp = programs.find(program => program.id === 'system-info');
+    if (aboutThisSiteApp) {
+      const openTimer = setTimeout(() => {
+        useSystemStore.getState().openWindow(aboutThisSiteApp);
+      }, 2000);
+      
+      return () => {
+        clearInterval(timeInterval);
+        clearTimeout(openTimer);
+      };
+    }
+
     return () => clearInterval(timeInterval);
   }, []);
 

@@ -41,7 +41,6 @@ export const Contact: React.FC = () => {
 
   const socialLinks = [
     { name: 'GitHub', icon: '🐙', url: userConfig.social.github },
-    { name: 'LinkedIn', icon: '💼', url: userConfig.social.linkedin },
     ...(userConfig.social.twitter ? [{ name: 'Twitter', icon: '🐦', url: userConfig.social.twitter }] : []),
     ...(userConfig.social.website ? [{ name: 'Website', icon: '🌐', url: userConfig.social.website }] : [])
   ];

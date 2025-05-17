@@ -29,6 +29,14 @@ export const programs: Program[] = [
     singleton: true
   },
   {
+    id: 'system-info',
+    name: 'About This Site',
+    icon: '/assets/icons/about.png',
+    component: SystemInfo,
+    defaultSize: { width: 500, height: 400 },
+    singleton: true
+  },
+  {
     id: 'projects',
     name: 'My Projects',
     icon: '/assets/icons/projects.png',
@@ -75,13 +83,5 @@ export const programs: Program[] = [
     component: Games,
     defaultSize: { width: 400, height: 500 },
     requiredAchievements: ['explorer']
-  },
-  {
-    id: 'system-info',
-    name: 'System Info',
-    icon: '/assets/icons/about.png',
-    component: SystemInfo,
-    defaultSize: { width: 500, height: 400 },
-    singleton: true
   }
 ]; 

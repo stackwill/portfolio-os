@@ -25,7 +25,6 @@ Available commands:
   projects - View my projects
   contact  - Show contact information
   github   - Open my GitHub profile
-  linkedin - Open my LinkedIn profile
   echo     - Echo the input
   date     - Show current date and time
     `,
@@ -72,7 +71,6 @@ Type "skills" or "projects" to learn more about my work.
     },
     contact: () => `
 📧 Email: ${userConfig.social.email}
-🔗 LinkedIn: ${userConfig.social.linkedin}
 🐙 GitHub: ${userConfig.social.github}
 ${userConfig.social.website ? `🌐 Website: ${userConfig.social.website}` : ''}
     `,
@@ -81,10 +79,6 @@ ${userConfig.social.website ? `🌐 Website: ${userConfig.social.website}` : ''}
     github: () => {
       window.open(userConfig.social.github, '_blank');
       return 'Opening GitHub profile...';
-    },
-    linkedin: () => {
-      window.open(userConfig.social.linkedin, '_blank');
-      return 'Opening LinkedIn profile...';
     }
   };
 
@@ -94,8 +88,10 @@ ${userConfig.social.website ? `🌐 Website: ${userConfig.social.website}` : ''}
 
     if (command === '') return '';
 
-    if (command in commands) {
-      return commands[command as keyof typeof commands](args.join(' '));
+    // Type-safe command check
+    const commandKey = command as keyof typeof commands;
+    if (commandKey in commands) {
+      return commands[commandKey](args.join(' '));
     }
 
     return `Command not found: ${command}\nType "help" for available commands.`;
@@ -107,9 +103,12 @@ ${userConfig.social.website ? `🌐 Website: ${userConfig.social.website}` : ''}
     const trimmedCommand = currentCommand.trim();
     const output = executeCommand(trimmedCommand);
     
+    const cmdName = trimmedCommand.split(' ')[0].toLowerCase();
+    const isValidCommand = Object.keys(commands).includes(cmdName);
+    
     setHistory(prev => [
       ...prev,
-      { command: trimmedCommand, output, isError: !commands[trimmedCommand.split(' ')[0]] }
+      { command: trimmedCommand, output, isError: !isValidCommand }
     ]);
     setCurrentCommand('');
   };
