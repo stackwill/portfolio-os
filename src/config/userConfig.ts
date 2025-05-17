@@ -108,8 +108,18 @@ const userConfig: UserConfig = {
       github: "https://github.com/stackwill/pow",
       year: "2025",
       category: "Programs"
+    },
+    {
+      title: "fix.md",
+      description: "A tool to automatically reformat and clean up markdown notes using the Gemini API",
+      technologies: ["Go"],
+      image: "assets/images/projects/fix.md.png",
+      link: "https://github.com/stackwill/fix.md",
+      github: "https://github.com/stackwill/fix.md",
+      year: "2025",
+      category: "Programs"
+
     }
-    // Add more projects here
   ],
   settings: {
     theme: "classic",

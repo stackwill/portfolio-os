@@ -56,7 +56,7 @@ export const Projects: React.FC = () => {
           </div>
         </div>
 
-        <div style={{ display: 'grid', gap: '16px', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))' }}>
+        <div style={{ display: 'grid', gap: '20px', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))' }}>
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -70,39 +70,28 @@ export const Projects: React.FC = () => {
                 overflow: 'hidden',
                 height: '100%',
                 display: 'flex',
-                flexDirection: 'column'
+                flexDirection: 'column',
+                padding: '16px'
               }}
-            >
-              <div
-                style={{
-                  height: '160px',
-                  background: '#f0f0f0',
-                  backgroundImage: `url(${project.image})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  position: 'relative'
-                }}
-              >
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: '8px',
-                    right: '8px',
-                    background: 'rgba(0,0,0,0.7)',
-                    color: '#fff',
-                    padding: '4px 8px',
-                    borderRadius: '4px',
-                    fontSize: '12px'
-                  }}
-                >
-                  {project.year}
+            >              
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+                  <h3 style={{ color: '#000080', fontSize: '16px', margin: 0 }}>
+                    {project.title}
+                  </h3>
+                  <div
+                    style={{
+                      background: '#f0f0f0',
+                      color: '#666',
+                      padding: '4px 8px',
+                      borderRadius: '4px',
+                      fontSize: '12px',
+                      border: '1px solid #ddd'
+                    }}
+                  >
+                    {project.year}
+                  </div>
                 </div>
-              </div>
-              
-              <div style={{ padding: '16px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                <h3 style={{ color: '#000080', marginBottom: '8px', fontSize: '16px' }}>
-                  {project.title}
-                </h3>
                 
                 <p style={{ 
                   marginBottom: '16px', 

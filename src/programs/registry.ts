@@ -33,7 +33,8 @@ export const programs: Program[] = [
     name: 'About This Site',
     icon: '/assets/icons/about.png',
     component: SystemInfo,
-    defaultSize: { width: 500, height: 400 },
+    defaultSize: { width: 650, height: 550 },
+    defaultPosition: { x: 200, y: 120 },
     singleton: true
   },
   {

@@ -46,6 +46,11 @@ interface Program {
   name: string;
   icon: string;
   component: React.ComponentType;
+  defaultSize?: { width: number; height: number };
+  defaultPosition?: { x: number; y: number };
+  allowResize?: boolean;
+  singleton?: boolean;
+  requiredAchievements?: string[];
 }
 
 export const useSystemStore = create<SystemState>((set, get) => ({
@@ -80,8 +85,8 @@ export const useSystemStore = create<SystemState>((set, get) => ({
       title: program.name,
       icon: program.icon,
       isMinimized: false,
-      position: { x: 50, y: 50 },
-      size: { width: 800, height: 600 },
+      position: program.defaultPosition || { x: 50, y: 50 },
+      size: program.defaultSize || { width: 800, height: 600 },
       zIndex: get().activeWindows.length + 1
     };
 
