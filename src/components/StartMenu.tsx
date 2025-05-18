@@ -35,7 +35,7 @@ export const StartMenu: React.FC = () => {
             style={{
               padding: '8px 12px',
               background: 'linear-gradient(to right, #000080, #1084d0)',
-              color: '#000',
+              color: '#fff',
               fontWeight: 'bold',
               fontSize: '14px'
             }}

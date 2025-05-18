@@ -63,7 +63,7 @@ export const Taskbar: React.FC = () => {
           alt="Start"
           style={{ width: '20px', height: '20px' }}
         />
-        <span style={{ fontWeight: 'bold', fontSize: '14px' }}>Start</span>
+        <span style={{ fontWeight: 'bold', fontSize: '14px', color: '#000' }}>Start</span>
       </motion.button>
 
       {/* Running Programs */}

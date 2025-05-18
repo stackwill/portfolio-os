@@ -147,9 +147,9 @@ ${userConfig.social.website ? `🌐 Website: ${userConfig.social.website}` : ''}
             {entry.command && (
               <div style={{ marginBottom: '4px' }}>
                 <span style={{ color: '#0f0' }}>{userConfig.personal.name.toLowerCase()}@portfolio-os</span>
-                <span style={{ color: '#fff' }}>:</span>
+                <span style={{ color: '#000' }}>:</span>
                 <span style={{ color: '#00f' }}>~</span>
-                <span style={{ color: '#fff' }}>$ </span>
+                <span style={{ color: '#000' }}>$ </span>
                 <span>{entry.command}</span>
               </div>
             )}
@@ -167,9 +167,9 @@ ${userConfig.social.website ? `🌐 Website: ${userConfig.social.website}` : ''}
       </div>
       <form onSubmit={handleSubmit} style={{ display: 'flex' }}>
         <span style={{ color: '#0f0' }}>{userConfig.personal.name.toLowerCase()}@portfolio-os</span>
-        <span style={{ color: '#fff' }}>:</span>
+        <span style={{ color: '#000' }}>:</span>
         <span style={{ color: '#00f' }}>~</span>
-        <span style={{ color: '#fff' }}>$ </span>
+        <span style={{ color: '#000' }}>$ </span>
         <input
           ref={inputRef}
           type="text"

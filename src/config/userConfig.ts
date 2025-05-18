@@ -60,7 +60,7 @@ const userConfig: UserConfig = {
     role: "Young Developer",
     location: "United Kingdom",
     avatar: "/assets/images/profile.jpg",
-    bio: "Started with minecraft command blocks, evolved into whatever this is."
+    bio: "Started with minecraft command blocks, evolved into whatever this is. Best to check my github for more info about me!"
   },
   social: {
     github: "https://github.com/stackwill",
@@ -95,7 +95,7 @@ const userConfig: UserConfig = {
       technologies: ["React", "TypeScript", "Zustand", "Framer Motion"],
       image: "/assets/images/projects/portfolio-os.png",
       link: "#",
-      github: "https://github.com/yourusername/portfolio-os",
+      github: "https://github.com/stackwill/portfolio-os",
       year: "2024",
       category: "Web Development"
     },
@@ -104,7 +104,7 @@ const userConfig: UserConfig = {
       description: "A simple nano-like text editor with syntax highlighting and theming",
       technologies: ["Go"],
       image: "/assets/images/projects/portfolio-os.png",
-      link: "#",
+      link: "https://github.com/stackwill/pow",
       github: "https://github.com/stackwill/pow",
       year: "2025",
       category: "Programs"

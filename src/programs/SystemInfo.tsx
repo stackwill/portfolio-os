@@ -57,7 +57,7 @@ export const SystemInfo: React.FC = () => {
             whileTap={{ scale: 0.95 }}
           >
             <a
-              href="https://github.com/stackwill/portfolio-os"
+              href="https://github.com/stackwill/portfolio"
               target="_blank"
               rel="noopener noreferrer"
               style={{ 

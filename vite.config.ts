@@ -8,5 +8,8 @@ export default defineConfig({
     port: 3000,
     open: true
   },
-  base: './'
+  base: './',
+  define: {
+    __BUILD_WATERMARK__: JSON.stringify('© 2025 William Hanlon | github.com/stackwill'),
+  }
 })
