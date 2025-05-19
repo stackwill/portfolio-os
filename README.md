@@ -1,16 +1,8 @@
-# Portfolio OS
+# **<span style="color:#7f5af0">Portfolio</span> <span style="color:#2cb67d">OS</span>**
+
 
 A Windows-style portfolio website built with React, TypeScript, and Zustand.
-
-## Features
-
-- 🖥️ Retro OS interface
-- 🪟 Draggable windows
-- 📱 Responsive design
-- 🎨 Customizable themes
-- 🎵 System sounds
-- 🎮 Easter eggs
-- 📂 Multiple programs/apps
+Featuring a web based window compositor, state manager, display manager, modular app system and dynamic configuration.
 
 ## Getting Started
 
@@ -49,15 +41,15 @@ The build artifacts will be stored in the `dist/` directory.
 
 ## Programs
 
-- 📝 Notepad
-- 👤 About Me
-- 💼 Projects
-- 💻 Terminal
-- 📧 Contact Form
-- 🎯 Skills Viewer
-- 🖼️ Project Gallery
-- 📚 Blog Reader
-- 🎮 Mini Games
+- Notepad
+- About Me
+- Projects
+- Terminal
+- Contact Form
+- Skills Viewer
+- Project Gallery
+- Blog Reader
+- Mini Games
 
 ## Technologies Used
 
