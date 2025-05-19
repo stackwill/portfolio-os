@@ -1,5 +1,7 @@
-# **<span style="color:#7f5af0">Portfolio</span> <span style="color:#2cb67d">OS</span>**
+![Portfolio OS](https://i.ibb.co/Kp7HJb3Z/cooltext482781113398693.png)
 
+![Stars](https://img.shields.io/github/stars/stackwill/portfolio-os?style=for-the-badge)
+![Forks](https://img.shields.io/github/forks/stackwill/portfolio-os?style=for-the-badge&color=red)
 
 A Windows-style portfolio website built with React, TypeScript, and Zustand.
 Featuring a web based window compositor, state manager, display manager, modular app system and dynamic configuration.
